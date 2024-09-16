@@ -30,7 +30,7 @@ const Page = ({params}:any) => {
       
       :gameData?.turn == session?.user?.email
         ?<h1 className=' text-center '>Your turn</h1>
-        :<h1 className=' text-center '>Opponent's turn</h1>
+        :<h1 className=' text-center '>Opponents turn</h1>
       }
     </div>
 }
@@ -49,7 +49,7 @@ const Page = ({params}:any) => {
 
          {gameData?.board?.map((items:any,index:number) => {
         return (
-          <div className='flex-col m-2 sm:m-3'>
+          <div key={index} className='flex-col m-2 sm:m-3'>
             
             {items[5] == "1" || items[5] == "2"
             ?<button className='my-3 bg-gray-300 rounded-full shadow sm:w-10 sm:h-10 w-6 h-6'></button>
@@ -61,7 +61,7 @@ const Page = ({params}:any) => {
             }
             
             {items.slice(0).reverse().map((subItems:any,index:any) => {
-              return <div className='my-3'>
+              return <div key={index} className='my-3'>
                 
                 {
                 subItems == "" && <div className='sm:w-10 sm:h-10 w-6 h-6  border-black border-2 rounded-full  bg-[#7945FF] shadow-in' ></div>||
