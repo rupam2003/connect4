@@ -18,7 +18,7 @@ const AvailableGames = ({userEmail}:Props) => {
     
     return (
     <div>
-        <h1 className='text-4xl text-center my-4 '>Available games for you</h1>
+        <h1 className='text-2xl text-center my-4 '>Available games for you</h1>
         {games?.map((e:any)=>{
             return <div key={e._id} className='bg-white py-3 my-4 mx-2 shadow rounded-lg flex items-center justify-between'>
                 <h1 className='ml-3 text-xl'>
