@@ -35,7 +35,7 @@ const CreateGame = ({userEmail}:Props) => {
   return (
     <div className='flex   flex-col gap-2 items-center mt-12 text-xl'>
 
-      <button onClick={handleClick} className='btn bg-white mb-5 text-2xl   px-12 py-3 rounded-lg'>CREATE A GAME</button>
+      <button onClick={handleClick} className='btn bg-white mb-5 text-xl   px-12 py-3 rounded-xl'>CREATE A GAME</button>
 
     <h1>{gameId && "GAME CREATED"}</h1>
     {gameStatus && <h1>{gameStatus != "not-found"? "Waiting for someone to join":"" }</h1>}
