@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Lilita_One } from "next/font/google";
-import { Nerko_One } from "next/font/google";
+import { Open_Sans } from "next/font/google";
+
 import "./globals.css";
 import { ConvexClientProvider } from "./ConvexClientProvider";
 import Header from "./Components/Header";
 
-const inter = Lilita_One({
+const inter = Open_Sans({
   subsets: ["latin"],
-  weight: "400"
+  weight: ["700"]
 });
 
 export const metadata: Metadata = {
@@ -24,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ConvexClientProvider>
-      <body className={`min-h-full text-black   ${inter.className}`}>
+      <body className={`min-h-full  bg-[#7945FF] text-white   ${inter.className}`}>
         
           <Header/>
-          <div className="max-w-[800px] mx-auto">
+          <div className="max-w-[800px]  mx-auto">
             {children}
           </div>
         </body>
