@@ -38,7 +38,7 @@ export default function RegisterUser({email, name, image}:Props) {
     <main className="flex flex-col items-center">
       
       
-      <button onClick={()=>signOut()}>signOut</button>  
+      
 
      
       
