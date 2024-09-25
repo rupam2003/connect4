@@ -1,4 +1,5 @@
 "use client"
+import VersusArea from '@/app/Components/VersusArea'
 import { api } from '@/convex/_generated/api'
 import { useMutation, useQuery } from 'convex/react'
 import { useSession } from 'next-auth/react'
@@ -7,6 +8,7 @@ import React from 'react'
 const Page = ({params}:any) => {
   const gameData = useQuery(api.games.getSingleGame,{gameId:params.id})
   const isWin = useQuery(api.games.isWin,{gameId:params.id})
+  
   const updateBoard = useMutation(api.games.updateBoard)
   const {data:session} = useSession()
   const handleClick = (e:any) =>{
@@ -20,9 +22,14 @@ const Page = ({params}:any) => {
     })
 
   }
-  
+  if(!gameData)
+    return <></>
   return (
     <>
+    {
+    gameData && session?.user?.email && <VersusArea currentUser={session?.user?.email} player1Email={gameData.player1} player2Email={gameData.player2}/>
+    }
+
     {isWin && <div className='m-5 text-2xl  '>
 
       {isWin && isWin != "no" ?<></>
@@ -34,6 +41,8 @@ const Page = ({params}:any) => {
       }
     </div>
 }
+  {/* vs area */}
+ 
 
   {/* game result win/loss/draw */}
   {
