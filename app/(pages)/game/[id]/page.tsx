@@ -22,8 +22,8 @@ const Page = ({params}:any) => {
     })
 
   }
-  if(!gameData)
-    return <></>
+  if(gameData == 'not-found')
+    return <>Game not found</>
   return (
     <>
     {
