@@ -29,9 +29,9 @@ export default function RootLayout({
       
       <body className={`min-h-full antialiased  bg-black text-[#EDEDED]  font-bold  ${inter.className}`}>
         
-          <Header/>
-          <BgWrapper>
           
+          <BgWrapper>
+          <Header/>
             {children}
           
           </BgWrapper>
