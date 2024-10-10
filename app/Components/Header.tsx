@@ -8,7 +8,7 @@ const Header = () => {
     const {data:session} = useSession()
 
     return (
-    <header className='sticky top-2 w-full bg-black max-w-[800px] m-2'>
+    <header className='z-50 sticky top-2 w-full bg-black max-w-[800px] m-2'>
         <div className=' rounded-xl border-[1px] border-[rgb(39, 39, 42)] mx-3 flex justify-between items-center'>
         
         <h1 className='text-2xl ml-4 m-2'>CONNECT4</h1>
