@@ -2,6 +2,7 @@
 import React from 'react'
 import { signIn } from 'next-auth/react'
 import Button from '@/app/Components/Button'
+import board from '@/public/board.png'
 import Image from 'next/image'
 
 
@@ -16,8 +17,16 @@ const Page = () => {
         
     </div>
     <div className='w-full flex flex-col items-center sm:flex-row sm:justify-center mt-5 '>
-      <div className='mx-3 w-[200px] h-[200px]  relative '><Image className=' border-white border-[1px] rounded-lg' src={"/board.png"} fill objectFit='contain' alt={"profile"}/></div>
-      <section className='sm:text-base text-sm flex flex-col gap-2 mx-4'>
+      <div className='mx-3 w-[200px] h-[200px]  relative '>
+        <Image
+        placeholder='blur' 
+        draggable={false} 
+        className='object-contain border-white border-[1px] rounded-lg' 
+        src={board} 
+        fill 
+        alt={"profile"}/>
+      </div>
+      <section className='z-10 mb-10 mt-5 sm:text-base text-sm flex flex-col gap-2 mx-6'>
         <h1 className='sm:text-2xl text-lg'>How to play : </h1>
         <p className=' font-normal'>1. When it is your turn click on any of the green buttons and your piece will drop to the bottom most empty slot.</p>
         <p className=' font-normal'>2. Then the turn will go to your opponent </p>
