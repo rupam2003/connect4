@@ -27,7 +27,7 @@ const Page = ({params}:any) => {
   return (
     <>
     {
-    !gameData && gameData !== 'not-found' && session?.user?.email && <VersusArea currentUser={session?.user?.email} player1Email={gameData.player1} player2Email={gameData.player2}/>
+    gameData && gameData !== 'not-found' && session?.user?.email && <VersusArea currentUser={session?.user?.email} player1Email={gameData.player1} player2Email={gameData.player2}/>
     }
 
     {isWin && <div className='m-5 text-2xl  '>
