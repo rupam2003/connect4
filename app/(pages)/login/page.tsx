@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <>
     <div className='sm:mt-[20vh] mt-[10vh] flex flex-col items-center gap-5 '>
-      <h1 className=' text-4xl sm:text-6xl text-center font-bold mx-10 relative z-20 bg-clip-text text-transparent bg-gradient-to-r from-[#06619C] to-[#00FF95]'>Online Multiplayer Connect4 </h1>
+      <h1 className=' text-4xl sm:text-6xl text-center font-bold mx-10 relative z-20 bg-clip-text text-transparent bg-gradient-to-r from-[#06619C] to-[#00FF95]'>Online Multiplayer<br/>Connect4 </h1>
         <Button text='GET STARTED' onClick={()=>signIn("google")}/>
         
         
