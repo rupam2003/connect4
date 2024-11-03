@@ -18,9 +18,7 @@ const Page = async () => {
         name = {session?.user?.name as string}
         image = {session?.user?.image as string}
         />
-        <p className="mt-[20vh] mx-8 text-4xl sm:text-6xl text-center font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-    Online Multiplayer Connect4
-    </p>
+        <h1 className=' text-4xl sm:text-6xl text-center font-bold mx-10 relative z-20 bg-clip-text text-transparent bg-gradient-to-r from-[#06619C] to-[#00FF95]'>Online Multiplayer<br/>Connect4 </h1>
         <div className='flex flex-col gap-4 sm:flex-row '>
           
         <Link className="w-32 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] "  href={"/create"}>
