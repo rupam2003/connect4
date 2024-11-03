@@ -11,7 +11,7 @@ const Page = async () => {
     redirect("/login")
   return (
   
-    <div className='flex flex-col items-center '>
+    <div className='sm:mt-[20vh] mt-[10vh] flex flex-col items-center gap-5'>
       {/* <HomePage/> */}
       <RegisterUser 
         email = {session?.user?.email as string}
