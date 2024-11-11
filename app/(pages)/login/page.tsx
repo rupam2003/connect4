@@ -9,7 +9,7 @@ import Image from 'next/image'
 const Page = () => {
   return (
     <>
-    <div className='sm:mt-[20vh] mt-[10vh] flex flex-col items-center gap-5 '>
+    <div className='sm:mt-[20vh] mt-[10vh] flex flex-col items-center '>
       <h1 className=' text-4xl sm:text-6xl text-center font-bold mx-10 relative z-20 bg-clip-text text-transparent bg-gradient-to-r from-[#06619C] to-[#00FF95]'>Welcome to CONNECTx4 </h1>
       <h1 className='mb-6 text-xl sm:text-2xl text-center font-bold mx-10 relative z-20 bg-clip-text text-transparent bg-gradient-to-r from-[#06619C] to-[#00FF95]'>
         Play Online Multiplayer Connect4 Board Game
